@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 import styled from "styled-components";
 import Card1 from "./Card1";
@@ -23,6 +24,7 @@ const Bottom = styled.div`
 `;
 export default function Cards() {
   const [wid, setWid] = React.useState(true);
+  axios.get()
   return (
     <Page>
       <div className="container">

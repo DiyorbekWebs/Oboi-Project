@@ -11,10 +11,10 @@ const Box = styled.div`
   gap: 15px;
 `;
 const Right = styled.div`
-  background-color: red;
   position: relative;
 `;
 const Img = styled.img`
+  width: 428px;
   height: 600px;
 `;
 const Left = styled.div`
@@ -135,7 +135,6 @@ const Bttn = styled.button`
   background-color: transparent;
   cursor: pointer;
 `;
-
 
 const Texts1 = styled.div`
   display: flex;

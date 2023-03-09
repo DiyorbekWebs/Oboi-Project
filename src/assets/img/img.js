@@ -20,6 +20,7 @@ import V2 from "./v2.svg";
 import V3 from "./v3.svg";
 import V4 from "./v4.svg";
 import V6 from "./V6.svg";
+import backModal from "./backModal.jpg";
 export {
   Logo,
   Insta,
@@ -43,4 +44,5 @@ export {
   V3,
   V4,
   V6,
+  backModal,
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Router, Routes } from "react-router-dom";
+import ModalPart from "./components/Modal/Modal";
 import Catalog from "./pages/Catalog/Catalog";
 import ContactPage from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/pro" element={<Product />} />
       </Routes>
+      {/* <ModalPart/> */}
     </>
   );
 }

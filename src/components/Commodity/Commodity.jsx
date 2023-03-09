@@ -1,14 +1,16 @@
 import React from "react";
 import styled from "styled-components";
+import useModal from "../../hooks/useModal/useModal";
 import Product from "../../pages/OneProduct/Product";
 import { Yonalish } from "../Adress/Adres";
+import ModalPart from "../Modal/Modal";
 import List1 from "./List";
 import Products from "./Products";
-
 const Page = styled.section`
   padding: 33px 0px 50px 0px;
 `;
 const Box = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -126,7 +128,10 @@ const Paragrf2 = styled.p`
   line-height: 24px;
   color: #172335;
 `;
+const Modal = styled.div``;
 export default function Commodity() {
+  const { closeModal, open, openModal } = useModal();
+
   return (
     <Page>
       <div className="container">
@@ -153,8 +158,8 @@ export default function Commodity() {
                 </Paragrf>
               </Top>
               <Bottom>
-                <List1/>
-                <ZBtn>Заказать обои</ZBtn>
+                <List1 />
+                <ZBtn onClick={() => openModal()}>Заказать обои</ZBtn>
               </Bottom>
             </Texts>
           </Iformation>
@@ -175,8 +180,9 @@ export default function Commodity() {
               выбрать комфортный размер платежаАвтокредит без лишних документов{" "}
             </Paragrf2>
           </Texts3>
-          <Products/>
+          <Products />
         </Box>
+        {open ? <ModalPart close={closeModal}/> : null}
       </div>
     </Page>
   );
