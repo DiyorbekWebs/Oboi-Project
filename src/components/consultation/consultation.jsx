@@ -5,7 +5,7 @@ const Page = styled.section`
   padding: 57px 0px;
 `;
 const Box = styled.div`
-  background: #a6a6a8;
+  background: #eaeaeb;
   display: flex;
   align-items: center;
   gap: 182px;

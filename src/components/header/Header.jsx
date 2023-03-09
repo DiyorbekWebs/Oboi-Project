@@ -1,10 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { drop, face, Insta, Logo, Tg } from "../../assets/img/img";
-const Headerr = styled.header``;
+import {
+  drop,
+  face,
+  Insta,
+  Logo,
+  Navigate,
+  Telephone,
+  Tg,
+} from "../../assets/img/img";
+const Headerr = styled.header`
+  padding-right: 100px;
+`;
 const Box = styled.div`
-width: 100%;
+  width: 100%;
   padding: 32px 0px 13px 0px;
   display: flex;
   align-items: center;
@@ -17,7 +27,7 @@ const Left = styled.div`
 const Right = styled.div`
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 `;
 const LogoText = styled.div`
   display: flex;
@@ -62,10 +72,11 @@ const Btn = styled.div`
 `;
 const Btns = styled.div`
   display: flex;
-  gap: 9px;
+  gap: 15px;
   align-items: center;
 `;
 const Nav = styled.nav`
+  width: 1240px;
   padding: 26px 0px 38px 0px;
   display: flex;
   align-items: flex-end;
@@ -107,6 +118,40 @@ const Content = styled.div`
   flex-direction: column;
   align-items: flex-end;
 `;
+const Place = styled.div`
+  display: flex;
+  gap: 12px;
+  margin-right: 5px;
+`;
+const Texts = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  align-items: flex-start;
+`;
+const T1 = styled.p`
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #172335;
+  opacity: 0.5;
+`;
+const T2 = styled.p`
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 16px;
+  color: #172335;
+`;
+const Linnk = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+`;
 export default function Header() {
   return (
     <>
@@ -133,6 +178,13 @@ export default function Header() {
                     <img src={Tg} alt="" />
                   </Item>
                 </SocialList>
+                <Place>
+                  <img src={Navigate} alt="Navigate" />
+                  <Texts>
+                    <T1>р.Чилонзор, Абу-Сахий 56 м</T1>
+                    <T2>р.Чилонзор, Абу-Сахий 56 м</T2>
+                  </Texts>
+                </Place>
                 <Link>
                   <Btns>
                     <Btn>Заказать обои</Btn>
@@ -141,27 +193,26 @@ export default function Header() {
                 </Link>
               </Right>
             </Box>
-            <div className="container">
-              <Nav>
-                <List>
-                  <Link>
-                    <Item2>Главная</Item2>
-                  </Link>
-                  <Link>
-                    <Item2>Каталог</Item2>
-                  </Link>
-                  <Link>
-                    <Item2>Услуги и цены</Item2>
-                  </Link>
-                  <Link>
-                    <Item2>Контакты</Item2>
-                  </Link>
-                </List>
-                <Link to={"tel:+998935614220"}>
-                  <Nomer>+998935642255</Nomer>
+            <Nav>
+              <List>
+                <Link to={'/'}>
+                  <Item2>Главная</Item2>
                 </Link>
-              </Nav>
-            </div>
+                <Link to={'/catalog'}>
+                  <Item2>Каталог</Item2>
+                </Link>
+                <Link to={'/pro'}>
+                  <Item2>Услуги и цены</Item2>
+                </Link>
+                <Link to={'/contact'}>
+                  <Item2>Контакты</Item2>
+                </Link>
+              </List>
+              <Linnk to={"tel:+998935614220"}>
+                <img src={Telephone} alt="Telephone" />
+                <Nomer>+998935642255</Nomer>
+              </Linnk>
+            </Nav>
           </Content>
         </div>
       </Headerr>

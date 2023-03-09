@@ -1,12 +1,10 @@
 import React from "react";
-import styled from "styled-components";
-import Cards from "../../components/CardsPage/Cards";
-import Consultation from "../../components/consultation/consultation";
-import Contact from "../../components/Contact/Contact";
+import Adres from "../../components/Adress/Adres";
 import ContactBot from "../../components/Contact/ContactBot";
-import Carusel1 from "../../components/HeroHome/Carusel1";
 import Layout from "../../Layout/Layout";
 import { RotatingSquare } from "react-loader-spinner";
+import styled from "styled-components";
+import Contact from "../../components/Contact/Contact";
 
 const Animation = styled.div`
   width: 100%;
@@ -20,7 +18,7 @@ const Animation = styled.div`
   align-items: center;
   justify-content: center;
 `;
-export default function Home() {
+export default function ContactPage() {
   const [state, setState] = React.useState(false);
   setTimeout(() => {
     setState(false);
@@ -42,10 +40,7 @@ export default function Home() {
         </Animation>
       ) : null}
       <Layout>
-        <Carusel1 />
-        <Consultation />
-        <Cards />
-        <Contact />
+        <Adres />
         <ContactBot />
       </Layout>
     </>
