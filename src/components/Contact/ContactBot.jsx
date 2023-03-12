@@ -4,10 +4,12 @@ const Section = styled.section`
   padding: 93px 0px 104px 0px;
 `;
 const Box = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 36px;
+
 `;
 const Texts = styled.div`
   display: flex;
@@ -57,6 +59,7 @@ const Btn = styled.button`
 const Divv = styled.div`
   width: 1387px;
   height: 494px;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
@@ -66,6 +69,12 @@ const Divv = styled.div`
     rgba(255, 255, 255, 0.92) 63.69%,
     #ffffff 100%
   );
+`;
+const Mapp = styled.div`
+  position: absolute;
+  left: 20%;
+  top: 0;
+  z-index: -1;
 `;
 
 export default function ContactBot() {
@@ -84,7 +93,41 @@ export default function ContactBot() {
             </Paragrf>
           </Texts>
           <Btn>Свяжитесь с нами</Btn>
-         
+          <Mapp>
+            <div style={{ position: "relative", overflow: "hidden" }}>
+              <Divv></Divv>
+              <a
+                href="https://yandex.uz/maps?utm_medium=mapframe&utm_source=maps"
+                style={{
+                  color: "#eee",
+                  fontSize: 12,
+                  position: "absolute",
+                  top: 0,
+                }}
+              >
+                Яндекс&nbsp;Карты
+              </a>
+              <a
+                href="https://yandex.uz/maps/?ll=69.110415%2C41.276633&utm_medium=mapframe&utm_source=maps&z=15"
+                style={{
+                  color: "#eee",
+                  fontSize: 12,
+                  position: "absolute",
+                  top: 14,
+                }}
+              >
+                Яндекс&nbsp;Карты — транспорт, навигация, поиск мест
+              </a>
+              <iframe
+                src="https://yandex.uz/map-widget/v1/?ll=69.110415%2C41.276633&z=15"
+                width={1387}
+                height={494}
+                frameBorder={1}
+                allowFullScreen="true"
+                style={{ position: "relative" }}
+              />
+            </div>
+          </Mapp>
         </Box>
       </div>
     </Section>

@@ -29,7 +29,7 @@ const Telefon = styled.div`
   display: flex;
   flex-direction: column;
   gap: 9px;
-  background-color: lightgray;
+  background-color: #f1f1f1;
   border-radius: 2px;
 `;
 const Manzil = styled.div`
@@ -38,7 +38,7 @@ const Manzil = styled.div`
   flex-direction: column;
   gap: 9px;
   border-radius: 2px;
-  background-color: lightgray;
+  background-color: #f1f1f1;
 `;
 const Text1 = styled.p`
   font-family: "Inter";

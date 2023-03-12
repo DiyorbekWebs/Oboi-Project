@@ -4,7 +4,6 @@ import ContactBot from "../../components/Contact/ContactBot";
 import Layout from "../../Layout/Layout";
 import { RotatingSquare } from "react-loader-spinner";
 import styled from "styled-components";
-import Contact from "../../components/Contact/Contact";
 
 const Animation = styled.div`
   width: 100%;

@@ -42,7 +42,7 @@ export default function Home() {
         </Animation>
       ) : null}
       <Layout>
-        <Carusel1 />
+        <Carusel1/>
         <Consultation />
         <Cards />
         <Contact />

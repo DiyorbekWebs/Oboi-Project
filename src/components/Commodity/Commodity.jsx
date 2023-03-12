@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import useModal from "../../hooks/useModal/useModal";
-import Product from "../../pages/OneProduct/Product";
 import { Yonalish } from "../Adress/Adres";
 import ModalPart from "../Modal/Modal";
 import List1 from "./List";

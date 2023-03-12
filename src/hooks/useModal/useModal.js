@@ -11,5 +11,5 @@ export default function useModal() {
   const toggleModal = () => {
     setOpen(!open);
   };
-  return { open, openModal, closeModal };
+  return { open, openModal, closeModal ,toggleModal};
 }
