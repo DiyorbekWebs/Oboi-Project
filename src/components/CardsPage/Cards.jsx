@@ -49,11 +49,11 @@ const Bottom = styled.div`
 `;
 export default function Cards() {
   const [wid, setWid] = React.useState(true);
-  const [value, setValue] = React.useState();
+  // const [value, setValue] = React.useState();
 
-  axios
-    .get("http://localhost:9000/products")
-    .then((res) => setValue(res.data.Products));
+  // axios
+  //   .get("http://localhost:9000/products")
+  //   .then((res) => setValue(res.data.Products));
   return (
     <Page>
       <div className="container">
