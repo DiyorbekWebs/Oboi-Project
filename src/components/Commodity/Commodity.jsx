@@ -13,20 +13,40 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   gap: 40px;
+  @media screen and (max-width: 430px) {
+    gap: 30px;
+  }
 `;
 const Iformation = styled.div`
   display: flex;
   gap: 57px;
   margin-bottom: 39px;
+  @media screen and (max-width: 886px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 430px) {
+    gap: 30px;
+  }
 `;
 const Images = styled.div`
   display: flex;
   gap: 6px;
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+  }
 `;
 const Img1 = styled.img`
   width: 375px;
   height: 500px;
-  background-color: red;
+  background-color: #e5a9a9;
+  @media screen and (max-width: 886px) {
+    width: 400px;
+    height: 520px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+    height: 460px;
+  }
 `;
 const Img = styled.div`
   display: flex;
@@ -37,16 +57,35 @@ const Img2 = styled.img`
   width: 351px;
   height: 247px;
   background-color: red;
+  @media screen and (max-width: 886px) {
+    width: 400px;
+    height: 257px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+    height: 270px;
+  }
 `;
 const Texts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 37px;
+  @media screen and (max-width: 886px) {
+    flex-direction: row;
+    gap: 100px;
+  }
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+    gap: 30px;
+  }
 `;
 const Top = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
+  @media screen and (max-width: 430px) {
+    gap: 25px;
+  }
 `;
 const Texts2 = styled.div`
   display: flex;
@@ -84,6 +123,9 @@ const Bottom = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 69px;
+  @media screen and (max-width: 430px) {
+    gap: 50px;
+  }
 `;
 
 const ZBtn = styled.button`
@@ -117,6 +159,28 @@ const Text2 = styled.h1`
   font-size: 40px;
   line-height: 46px;
   color: #172335;
+  @media screen and (max-width: 1281px) {
+    width: 1195 px;
+    font-size: 30px;
+    line-height: 41px;
+  }
+  @media screen and (max-width: 885px) {
+    width: 840px;
+  }
+  @media screen and (max-width: 835px) {
+    width: 785px;
+  }
+  @media screen and (max-width: 801px) {
+    width: 765px;
+  }
+  @media screen and (max-width: 770px) {
+    width: 730px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+  }
 `;
 const Paragrf2 = styled.p`
   width: 698px;
@@ -126,6 +190,11 @@ const Paragrf2 = styled.p`
   font-size: 16px;
   line-height: 24px;
   color: #172335;
+  @media screen and (max-width: 430px) {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 const Modal = styled.div``;
 export default function Commodity() {
@@ -181,7 +250,7 @@ export default function Commodity() {
           </Texts3>
           <Products />
         </Box>
-        {open ? <ModalPart close={closeModal}/> : null}
+        {open ? <ModalPart close={closeModal} /> : null}
       </div>
     </Page>
   );

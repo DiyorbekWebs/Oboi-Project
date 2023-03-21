@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
 }
-body{
+body {
   overflow-x: hidden;
 }
 a {
@@ -27,4 +27,125 @@ li {
 .h2-container {
   width: 100%;
   max-width: 1240px;
+}
+@media screen and (max-width: 1281px) {
+  .container {
+    max-width: 1200px;
+  }
+  .h2-container {
+    max-width: 1200px;
+  }
+  .h1-container {
+    max-width: 1230px;
+  }
+}
+@media screen and (max-width: 885px) {
+  .container {
+    max-width: 840px;
+  }
+  .h2-container {
+    max-width: 840px;
+  }
+  .h1-container {
+    max-width: 860px;
+  }
+}
+@media screen and (max-width: 835px) {
+  .container {
+    max-width: 785px;
+  }
+  .h2-container {
+    max-width: 785px;
+  }
+  .h1-container {
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 801px) {
+  .container {
+    max-width: 755px;
+  }
+  .h2-container {
+    max-width: 755px;
+  }
+  .h1-container {
+    max-width: 770px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .container {
+    max-width: 730px;
+  }
+  .h2-container {
+    max-width: 730px;
+  }
+  .h1-container {
+    max-width: 740px;
+  }
+}
+@media screen and (max-width: 430px) {
+  .container {
+    max-width: 400px;
+  }
+  .h2-container {
+    max-width: 400px;
+  }
+  .h1-container {
+    max-width: 410px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .container {
+    max-width: 385px;
+  }
+  .h2-container {
+    max-width: 385px;
+  }
+  .h1-container {
+    max-width: 395px;
+  }
+}
+@media screen and (max-width: 391px) {
+  .container {
+    max-width: 360px;
+  }
+  .h2-container {
+    max-width: 360px;
+  }
+  .h1-container {
+    max-width: 370px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .container {
+    max-width: 345px;
+  }
+  .h2-container {
+    max-width: 345px;
+  }
+  .h1-container {
+    max-width: 355px;
+  }
+}
+@media screen and (max-width: 361px) {
+  .container {
+    max-width: 330px;
+  }
+  .h2-container {
+    max-width: 330px;
+  }
+  .h1-container {
+    max-width: 340px;
+  }
+}
+@media screen and (max-width: 321px) {
+  .container {
+    max-width: 300px;
+  }
+  .h2-container {
+    max-width: 300px;
+  }
+  .h1-container {
+    max-width: 305px;
+  }
 }

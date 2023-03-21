@@ -13,18 +13,47 @@ const Box = styled.div`
   gap: 105px;
 `;
 const Top = styled.div`
-  display: flex;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 20px;
+  row-gap: 50px;
+  @media screen and (max-width: 885px) {
+    grid-template-columns: auto auto;
+  }
+  @media screen and (max-width: 801px) {
+    row-gap: 30px;
+  }
+  @media screen and (max-width: 430px) {
+    grid-template-columns: auto;
+    column-gap: 30px;
+    margin: auto;
+}
 `;
 const Bottom = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 20px;
   row-gap: 50px;
+  @media screen and (max-width: 885px) {
+    grid-template-columns: auto auto;
+  }
+  @media screen and (max-width: 801px) {
+    row-gap: 30px;
+  }
+  @media screen and (max-width: 430px) {
+    grid-template-columns: auto;
+    column-gap: 0px;
+    margin: auto;
+
+  }
 `;
 export default function Cards() {
   const [wid, setWid] = React.useState(true);
-  axios.get()
+  const [value, setValue] = React.useState();
+
+  axios
+    .get("http://localhost:9000/products")
+    .then((res) => setValue(res.data.Products));
   return (
     <Page>
       <div className="container">
@@ -47,14 +76,19 @@ export default function Cards() {
               }
               wid={wid}
             />
-            <Card2 />
-            <Card2 />
-            <Card2 />
-            <Card2 />
-            <Card2 />
-            <Card2 />
-            <Card2 />
-            <Card2 />
+            {/* {value?.map((e, inx) => (
+              <Card2
+              key={inx}
+                text1={e.name}
+                img={"http://localhost:9000" + e.img}
+                text2={e.price}
+              />
+            ))} */}
+            <Card2></Card2>
+            <Card2></Card2>
+            <Card2></Card2>
+            <Card2></Card2>
+            <Card2></Card2>
           </Bottom>
         </Box>
       </div>

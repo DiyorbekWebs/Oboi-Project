@@ -8,7 +8,55 @@ const Card = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 31px;
+  overflow: hidden;
+
   cursor: default;
+  @media screen and (max-width: 885px) {
+    width: 385px;
+    height: 298px;
+  }
+  @media screen and (max-width: 885px) {
+    width: 409px;
+    height: 298px;
+  }
+  @media screen and (max-width: 835px) {
+    width: 380px;
+    height: 280px;
+  }
+  @media screen and (max-width: 801px) {
+    width: 366.5px;
+    height: 275px;
+  }
+  @media screen and (max-width: 770px) {
+    width: 355px;
+    height: 275px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 400px;
+    height: 300px;
+  }
+  @media screen and (max-width: 415px) {
+    width: 385px;
+    height: 270px;
+  }
+  @media screen and (max-width: 391px) {
+    width: 360px;
+    height: 260px;
+  }
+  @media screen and (max-width: 376px) {
+    width: 345px;
+    height: 254px;
+  }
+  @media screen and (max-width: 361px) {
+    width: 330px;
+    height: 250px;
+  }
+  @media screen and (max-width: 321px) {
+    width: 300px;
+    height: 250px;
+  }
+  
+  
 `;
 const Texts = styled.div`
   display: flex;
@@ -34,15 +82,23 @@ const Text1 = styled.p`
   color: #172335;
   opacity: 0.6;
 `;
+const Img = styled.img`
+  transition: 1s;
+
+  &:hover {
+    transition: 1s;
+    margin-left: 15px;
+    opacity: 1;
+  }
+`;
 export default function Card1({ wid, text1, text2 }) {
-  console.log(wid);
   return (
     <Card>
       <Texts>
         <Title>{text1}</Title>
         <Text1 style={{ width: wid ? "282px" : "357px" }}>{text2}</Text1>
       </Texts>
-      <img src={Vector} alt="Vector" />
+      <Img src={Vector} alt="Vector" />
     </Card>
   );
 }

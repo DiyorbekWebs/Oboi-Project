@@ -23,22 +23,61 @@ const Bottom = styled.div`
   display: flex;
   gap: 20px;
   align-items: center;
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+  }
 `;
 const Telefon = styled.div`
-  padding: 21px 35px 85px 30px;
+  width: 420px;
+  height: 198px;
+  padding: 20px 0px 0px 30px;
   display: flex;
   flex-direction: column;
   gap: 9px;
   background-color: #f1f1f1;
   border-radius: 2px;
+  @media screen and (max-width: 885px) {
+    width: 420px;
+    height: 198px;
+    padding: 20px;
+  }
+  @media screen and (max-width: 835px) {
+    width: 420px;
+    height: 170px;
+  }
+  @media screen and (max-width: 821px) {
+    width: 380px;
+    height: 170px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+  }
 `;
+
 const Manzil = styled.div`
-  padding: 21px 194px 37px 30px;
+  width: 819px;
+  height: 198px;
+  padding: 20px 0px 0px 30px;
   display: flex;
   flex-direction: column;
   gap: 9px;
   border-radius: 2px;
   background-color: #f1f1f1;
+  @media screen and (max-width: 885px) {
+    width: 819px;
+    height: 198px;
+    padding: 20px;
+  }
+  @media screen and (max-width: 835px) {
+    width: 800px;
+    height: 170px;
+  }
+  @media screen and (max-width: 821px) {
+    width: 560px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+  }
 `;
 const Text1 = styled.p`
   font-family: "Inter";
@@ -49,7 +88,7 @@ const Text1 = styled.p`
   color: #172335;
 `;
 const Text2 = styled.h1`
-  width: 360px;
+  width: 359px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 800;
@@ -57,9 +96,32 @@ const Text2 = styled.h1`
   line-height: 48px;
   letter-spacing: -0.04em;
   color: #172335;
+  @media screen and (max-width: 885px) {
+    font-size: 38px;
+    line-height: 38px;
+    width: 290px;
+  }
+  @media screen and (max-width: 835px) {
+    font-size: 32px;
+    line-height: 32px;
+    width: 250px;
+  }
+ 
 `;
 const Text3 = styled(Text2)`
   width: 595px;
+  @media screen and (max-width: 885px) {
+    width: 450px;
+  }
+  @media screen and (max-width: 885px) {
+    width: 400px;
+  }
+  @media screen and (max-width: 821px) {
+    width: 380px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+  }
 `;
 export default function Adres() {
   return (

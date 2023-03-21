@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Img6 } from "../../assets/img/img";
 const Page = styled.section`
@@ -9,6 +10,9 @@ const Box = styled.div`
   background-color: #eeeeee;
   display: flex;
   gap: 15px;
+  @media screen and (max-width: 430px) {
+    flex-direction: column;
+  }
 `;
 const Right = styled.div`
   position: relative;
@@ -16,6 +20,22 @@ const Right = styled.div`
 const Img = styled.img`
   width: 428px;
   height: 600px;
+  @media screen and (max-width: 885px) {
+    width: 370px;
+    height: 550px;
+  }
+  @media screen and (max-width: 835px) {
+    width: 340px;
+    height: 490px;
+  }
+  @media screen and (max-width: 770px) {
+    width: 320px;
+    height: 460px;
+  }
+  @media screen and (max-width: 430px) {
+    width: 100%;
+    height: 460px;
+  }
 `;
 const Left = styled.div`
   padding: 54px 160px 11px 82px;
@@ -24,11 +44,32 @@ const Left = styled.div`
   background-color: #fff;
   align-items: flex-start;
   gap: 51px;
+  @media screen and (max-width: 1280px) {
+    padding: 54px 120px 11px 82px;
+  }
+  @media screen and (max-width: 885px) {
+    padding: 50px 25px 11px 40px;
+  }
+  @media screen and (max-width: 835px) {
+    padding: 35px 10px 0px 30px;
+    gap: 31px;
+  }
+  @media screen and (max-width: 835px) {
+    padding: 30px 25px 0px 20px;
+    gap: 25px;
+  }
+  @media screen and (max-width: 430px) {
+    padding: 20px 25px 20px 20px;
+    gap: 25px;
+  }
 `;
 const Top = styled.div`
   display: flex;
   flex-direction: column;
   gap: 26px;
+  @media screen and (max-width: 835px) {
+    gap: 15px;
+  }
 `;
 const Texts = styled.div`
   display: flex;
@@ -48,6 +89,21 @@ const Text2 = styled(Text1)`
   width: 454px;
   color: #172335;
   opacity: 0.4;
+  @media screen and (max-width: 885px) {
+    width: 370px;
+    font-size: 11px;
+  }
+
+  @media screen and (max-width: 770px) {
+    width: 330px;
+  }
+  @media screen and (max-width: 391px) {
+    width: 290px;
+  }
+  @media screen and (max-width: 361px) {
+    width: 286px;
+  }
+  
 `;
 const Title = styled.h1`
   color: #172335;
@@ -56,6 +112,10 @@ const Title = styled.h1`
   font-weight: 600;
   font-size: 24px;
   line-height: 29px;
+  @media screen and (max-width: 770px) {
+  font-size: 20px;
+
+  }
 `;
 const Form = styled.form`
   display: flex;
@@ -83,6 +143,21 @@ const Input = styled.input`
   border: 1px solid #c9cfd8;
   border-radius: 3px;
   outline: none;
+  @media screen and (max-width: 885px) {
+    width: 350px;
+  }
+  @media screen and (max-width: 770px) {
+    width: 330px;
+  }
+  @media screen and (max-width: 391px) {
+    width: 300px;
+  }
+  @media screen and (max-width: 376px) {
+    width: 270px;
+  }
+  @media screen and (max-width: 321px) {
+    width: 230px;
+  }
 `;
 const Btn = styled.button`
   padding: 15px 32px;
@@ -96,6 +171,14 @@ const Btn = styled.button`
   border: 2px solid #c5821c;
   background-color: #fff;
   cursor: pointer;
+  @media screen and (max-width: 885px) {
+    padding: 13px 15px;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 835px) {
+    padding: 11px 13px;
+    font-size: 12px;
+  }
 `;
 const Batafsil = styled.div`
   padding: 54px 104px 182px 42px;
@@ -112,6 +195,13 @@ const Batafsil = styled.div`
     rgba(181, 182, 186, 0.72) 0%,
     rgba(186, 185, 181, 0) 100%
   );
+
+  @media screen and (max-width: 885px) {
+    padding: 40px 0px 0px 40px;
+  }
+  @media screen and (max-width: 770px) {
+    padding: 30px 0px 0px 30px;
+  }
 `;
 const Title1 = styled.h1`
   font-family: Inter;
@@ -121,8 +211,9 @@ const Title1 = styled.h1`
   letter-spacing: 0px;
   text-align: left;
   color: #ffffff;
+  
 `;
-const Bttn = styled.button`
+const Bttn = styled(Link)`
   padding: 12px 18px;
   font-family: "Inter";
   font-style: normal;
@@ -133,7 +224,12 @@ const Bttn = styled.button`
   border: 1px solid #ffffff;
   border-radius: 150px;
   background-color: transparent;
-  cursor: pointer;
+  transition: 0.7s;
+  &:hover {
+    transition: 1s;
+    border: 1px solid #000;
+    color: #000;
+  }
 `;
 
 const Texts1 = styled.div`
